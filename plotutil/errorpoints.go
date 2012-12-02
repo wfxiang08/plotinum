@@ -1,7 +1,7 @@
 package plotutil
 
 import (
-	"code.google.com/p/plotinum/plotter"
+	"github.com/vron/plotinum/plotter"
 	"math"
 	"sort"
 )

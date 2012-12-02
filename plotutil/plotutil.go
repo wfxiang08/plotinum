@@ -8,8 +8,8 @@
 package plotutil
 
 import (
-	"code.google.com/p/plotinum/plot"
-	"code.google.com/p/plotinum/vg"
+	"github.com/vron/plotinum/plot"
+	"github.com/vron/plotinum/vg"
 	"image/color"
 )
 

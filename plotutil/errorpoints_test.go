@@ -1,8 +1,8 @@
 package plotutil
 
 import (
-	"code.google.com/p/plotinum/plot"
-	"code.google.com/p/plotinum/plotter"
+	"github.com/vron/plotinum/plot"
+	"github.com/vron/plotinum/plotter"
 	"math/rand"
 )
 

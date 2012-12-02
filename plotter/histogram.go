@@ -5,7 +5,7 @@
 package plotter
 
 import (
-	"code.google.com/p/plotinum/plot"
+	"github.com/vron/plotinum/plot"
 	"fmt"
 	"image/color"
 	"math"

@@ -5,7 +5,7 @@
 package plot
 
 import (
-	"code.google.com/p/plotinum/vg"
+	"github.com/vron/plotinum/vg"
 	"image/color"
 	"math"
 	"strings"

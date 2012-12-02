@@ -10,17 +10,17 @@
 // interface can draw to the data area of a plot using the primitives
 // made available by this package.  Some standard implementations
 // of the Plotter interface can be found in the
-// code.google.com/p/plotinum/plotter package
+// github.com/vron/plotinum/plotter package
 // which is documented here: 
-// http://go.pkgdoc.org/code.google.com/p/plotinum/plotter
+// http://go.pkgdoc.org/github.com/vron/plotinum/plotter
 package plot
 
 import (
-	"code.google.com/p/plotinum/vg"
-	"code.google.com/p/plotinum/vg/vgeps"
-	"code.google.com/p/plotinum/vg/vgimg"
-	"code.google.com/p/plotinum/vg/vgpdf"
-	"code.google.com/p/plotinum/vg/vgsvg"
+	"github.com/vron/plotinum/vg"
+	"github.com/vron/plotinum/vg/vgeps"
+	"github.com/vron/plotinum/vg/vgimg"
+	"github.com/vron/plotinum/vg/vgpdf"
+	"github.com/vron/plotinum/vg/vgsvg"
 	"fmt"
 	"image/color"
 	"io"
@@ -68,9 +68,9 @@ type Plot struct {
 
 // Plotter is an interface that wraps the Plot method.
 // Some standard implementations of Plotter can be
-// found in the code.google.com/p/plotinum/plotter
+// found in the github.com/vron/plotinum/plotter
 // package, documented here:
-// http://go.pkgdoc.org/code.google.com/p/plotinum/plotter
+// http://go.pkgdoc.org/github.com/vron/plotinum/plotter
 type Plotter interface {
 	// Plot draws the data to a DrawArea.
 	Plot(DrawArea, *Plot)
