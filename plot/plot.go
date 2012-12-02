@@ -438,6 +438,22 @@ func (p *Plot) NominalY(names ...string) {
 	p.Y.Tick.Marker = ConstantTicks(ticks)
 }
 
+func (p *Plot) WriteSvg(width, height float64, ww io.Writer) (err error) {
+	w, h := vg.Inches(width), vg.Inches(height)
+	var c interface {
+		vg.Canvas
+		Size() (w, h vg.Length)
+		io.WriterTo
+	}
+
+	c = vgsvg.New(w, h)
+
+	p.Draw(MakeDrawArea(c))
+
+	_, err = c.WriteTo(ww)
+	return err
+}
+
 // Save saves the plot to an image file.  Width and height
 // are specified in inches, and the file format is determined
 // by the extension.  Supported extensions are
