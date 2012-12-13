@@ -16,12 +16,12 @@
 package plot
 
 import (
+	"fmt"
 	"github.com/vron/plotinum/vg"
 	"github.com/vron/plotinum/vg/vgeps"
 	"github.com/vron/plotinum/vg/vgimg"
 	"github.com/vron/plotinum/vg/vgpdf"
 	"github.com/vron/plotinum/vg/vgsvg"
-	"fmt"
 	"image/color"
 	"io"
 	"math"
@@ -438,7 +438,7 @@ func (p *Plot) NominalY(names ...string) {
 	p.Y.Tick.Marker = ConstantTicks(ticks)
 }
 
-func (p *Plot) WriteSvg(width, height float64, ww io.Writer) (err error) {
+func (p *Plot) WriteSvg(width, height float64, ww io.Writer, par string) (err error) {
 	w, h := vg.Inches(width), vg.Inches(height)
 	var c interface {
 		vg.Canvas
@@ -446,7 +446,7 @@ func (p *Plot) WriteSvg(width, height float64, ww io.Writer) (err error) {
 		io.WriterTo
 	}
 
-	c = vgsvg.New(w, h)
+	c = vgsvg.NewStyle(w, h, par)
 
 	p.Draw(MakeDrawArea(c))
 
